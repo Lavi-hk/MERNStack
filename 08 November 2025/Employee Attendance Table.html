@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attendance Table</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(-45deg, #e8dcc8 25%, #f5f1eb 25%, #f5f1eb 50%, #e8dcc8 50%, #e8dcc8 75%, #f5f1eb 75%, #f5f1eb);
+            background-size: 60px 60px;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #a4364a;
+            margin-bottom: 30px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .table-wrapper {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 3px solid #a4364a;
+        }
+
+        .table-title {
+            background-color: #faf7f2;
+            padding: 15px;
+            text-align: center;
+            color: #a4364a;
+            font-size: 16px;
+            font-weight: 600;
+            border-bottom: 2px solid #a4364a;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: #faf7f2;
+        }
+
+        th {
+            background-color: #faf7f2;
+            color: #a4364a;
+            padding: 18px 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+            border-right: 2px solid #a4364a;
+            border-bottom: 3px solid #a4364a;
+        }
+
+        th:last-child {
+            border-right: none;
+        }
+
+        td {
+            padding: 18px 15px;
+            border-right: 2px solid #a4364a;
+            font-size: 14px;
+            color: #333;
+            background-color: white;
+        }
+
+        td:last-child {
+            border-right: none;
+        }
+
+        tbody tr {
+            border-bottom: 2px solid #a4364a;
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background-color: #faf7f2;
+            transition: background-color 0.3s ease;
+        }
+
+        .status-present {
+            color: #2d7a3e;
+            font-weight: 500;
+        }
+
+        .status-absent {
+            color: #a4364a;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Attendance Table</h1>
+        
+        <div class="table-wrapper">
+            <div class="table-title">Attendance Records</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Attendance Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12345</td>
+                        <td>example1</td>
+                        <td>IT</td>
+                        <td><span class="status-present">Present</span></td>
+                    </tr>
+                    <tr>
+                        <td>67890</td>
+                        <td>example2</td>
+                        <td>HR</td>
+                        <td><span class="status-absent">Absent</span></td>
+                    </tr>
+                    <tr>
+                        <td>54321</td>
+                        <td>example3</td>
+                        <td>Finance</td>
+                        <td><span class="status-present">Present</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
