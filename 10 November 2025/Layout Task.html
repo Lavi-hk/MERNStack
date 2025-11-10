@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout Task</title>
+  <style>
+    body {
+      background: #d7efd7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 98vw;
+      height: 98vh;
+      margin: 1vh auto;
+      border: 5px solid #d7efd7;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5vw;
+    }
+    .header {
+      display: flex;
+      gap: 0.5vw;
+    }
+    .header div {
+      background: #cd7d79;
+      flex: 1;
+      height: 100px;
+      border-radius: 0.2em;
+    }
+    .main {
+      display: flex;
+      flex: 1;
+      gap: 0.5vw;
+    }
+    .left {
+      background: #7b8371;
+      flex: 3;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.2em;
+    }
+    .center-box {
+      width: 100px;
+      height: 100px;
+      background: #f8ef68;
+      border-radius: 0.1em;
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      flex: 2;
+      gap: 0.5vw;
+    }
+    .right div {
+      background: #8e9c68;
+      border-radius: 0.2em;
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="main">
+      <div class="left">
+        <div class="center-box"></div>
+      </div>
+      <div class="right">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
