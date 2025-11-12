@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Basic Operators Example</title>
+</head>
+<body>
+    <h1>Basic Operators in JavaScript</h1>
+
+    <p id="arithmetic"></p>
+    <p id="assignment"></p>
+    <p id="comparison"></p>
+    <p id="logical"></p>
+    <p id="ternary"></p>
+
+    <script>
+        let x = 8;
+        let y = 3;
+
+        // Arithmetic Operators
+        let arithmeticResult =
+            "Add: " + (x + y) + ", " +
+            "Subtract: " + (x - y) + ", " +
+            "Multiply: " + (x * y) + ", " +
+            "Divide: " + (x / y).toFixed(2) + ", " +
+            "Modulus: " + (x % y);
+        document.getElementById("arithmetic").innerText = "Arithmetic Operators: " + arithmeticResult;
+
+        // Assignment Operators
+        let z = 5;
+        z += 2; // z = z + 2
+        let assignmentResult = "z after 'z += 2' is " + z;
+        document.getElementById("assignment").innerText = "Assignment Operator: " + assignmentResult;
+
+        // Comparison Operators
+        let comparisonResult =
+            "x == y? " + (x == y) + ", " +
+            "x != y? " + (x != y) + ", " +
+            "x > y? " + (x > y);
+        document.getElementById("comparison").innerText = "Comparison Operators: " + comparisonResult;
+
+        // Logical Operators
+        let logicalResult =
+            "(x > 5) AND (y < 5)? " + ((x > 5) && (y < 5)) + ", " +
+            "(x > 10) OR (y < 5)? " + ((x > 10) || (y < 5)) + ", " +
+            "NOT (x > 5)? " + (!(x > 5));
+        document.getElementById("logical").innerText = "Logical Operators: " + logicalResult;
+
+        // Ternary Operator
+        let message = (x > y) ? "x is bigger" : "y is bigger";
+        document.getElementById("ternary").innerText = "Ternary Operator: " + message;
+    </script>
+
+
+    <h1>Learning Loops in JavaScript</h1>
+
+    <h2>For Loop</h2>
+    <p id="forLoopOutput"></p>
+
+    <h2>While Loop</h2>
+    <p id="whileLoopOutput"></p>
+
+    <h2>Do-While Loop</h2>
+    <p id="doWhileLoopOutput"></p>
+
+    <script>
+        // For Loop
+        let forOutput = "";
+        for (let i = 1; i <= 5; i++) {
+            forOutput += i + " ";
+        }
+        document.getElementById("forLoopOutput").textContent = forOutput;
+
+        // While Loop
+        let whileOutput = "";
+        let j = 1;
+        while (j <= 5) {
+            whileOutput += j + " ";
+            j++;
+        }
+        document.getElementById("whileLoopOutput").textContent = whileOutput;
+
+        // Do-While Loop
+        let doWhileOutput = "";
+        let k = 1;
+        do {
+            doWhileOutput += k + " ";
+            k++;
+        } while (k <= 5);
+        document.getElementById("doWhileLoopOutput").textContent = doWhileOutput;
+    </script>
+
+
+    <h1>Conditional Statements in JavaScript</h1>
+    <div id="output"></div>
+
+    <script>
+        let output = '';
+
+        // if statement
+        let num = 10;
+        if (num > 5) {
+            output += '<p>if: Number is greater than 5.</p>';
+        }
+
+        // if-else statement
+        let temp = 30;
+        if (temp > 40) {
+            output += '<p>if-else: It is very hot.</p>';
+        } else {
+            output += '<p>if-else: It is not that hot.</p>';
+        }
+
+        // if-else if-else ladder
+        let score = 75;
+        if (score >= 90) {
+            output += '<p>if-else if-else: Grade A</p>';
+        } else if (score >= 70) {
+            output += '<p>if-else if-else: Grade B</p>';
+        } else if (score >= 50) {
+            output += '<p>if-else if-else: Grade C</p>';
+        } else {
+            output += '<p>if-else if-else: Grade F</p>';
+        }
+
+        // switch statement
+        let day = 3;
+        switch (day) {
+            case 1:
+                output += '<p>switch: Monday</p>';
+                break;
+            case 2:
+                output += '<p>switch: Tuesday</p>';
+                break;
+            case 3:
+                output += '<p>switch: Wednesday</p>';
+                break;
+            default:
+                output += '<p>switch: Another day</p>';
+        }
+
+        // ternary operator
+        let age = 18;
+        output += '<p>ternary: ' + (age >= 18 ? 'Adult' : 'Minor') + '</p>';
+
+        document.getElementById('output').innerHTML = output;
+    </script>
+
+</body>
+</html>
