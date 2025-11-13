@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Arithmetic Operators with Buttons</title>
+</head>
+<body>
+    <h1>Arithmetic Operators in JavaScript</h1>
+
+    <button onclick="showAdd()">Add</button>
+    <button onclick="showSubtract()">Subtract</button>
+    <button onclick="showMultiply()">Multiply</button>
+    <button onclick="showDivide()">Divide</button>
+
+    <p id="arithmetic"></p>
+
+    <script>
+        const a = 10;
+        const b = 10;
+
+        function showAdd() {
+            document.getElementById("arithmetic").innerHTML = "Add: " + (a + b);
+        }
+
+        function showSubtract() {
+            document.getElementById("arithmetic").innerHTML = "Subtract: " + (a - b);
+        }
+
+        function showMultiply() {
+            document.getElementById("arithmetic").innerHTML = "Multiply: " + (a * b);
+        }
+
+        function showDivide() {
+            document.getElementById("arithmetic").innerHTML = "Divide: " + (a / b).toFixed(2);
+        }
+    </script>
+</body>
+</html>
