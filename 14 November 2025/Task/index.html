@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management System</h1>
+        <div class="form-card">
+            <form id="employeeForm">
+                <div class="form-group">
+                    <label for="name">Employee Name:</label>
+                    <div class="autocomplete-container">
+                        <input type="text" id="name" placeholder="Enter or select name" />
+                        <div id="nameList" class="autocomplete-list"></div>
+                    </div>
+                    <div id="nameError" class="validation-message">Name is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" placeholder="Enter age (e.g., 25)" />
+                    <div id="ageError" class="validation-message">Age is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="position">Position:</label>
+                    <input type="text" id="position" placeholder="Enter position (e.g., Developer)" />
+                    <div id="positionError" class="validation-message">Position is required</div>
+                </div>
+                <button type="submit">Add Employee</button>
+            </form>
+        </div>
+        <div class="table-section">
+            <h2>Employee List</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Position</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr>
+                            <td colspan="4" class="empty-state">No employees added yet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
